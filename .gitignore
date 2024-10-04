@@ -24,3 +24,4 @@ hs_err_pid*
 replay_pid*
 /StackTrace_LoggingHandler/nbproject/private/
 /StackTrace_LoggingHandler/build/
+/StackTrace_LoggingHandler/dist/

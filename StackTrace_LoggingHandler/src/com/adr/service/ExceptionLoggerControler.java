@@ -13,7 +13,7 @@ public class ExceptionLoggerControler {
         } catch (Exception e) {
             String exceptionMessage = "ERROR!!: " + e.toString();
             ctrService.addException(exceptionMessage);
-            ctrLogger.ctrLogger(exceptionMessage);
+            ctrLogger.logException(exceptionMessage);
         }
         ctrService.showStoredException();
     }
