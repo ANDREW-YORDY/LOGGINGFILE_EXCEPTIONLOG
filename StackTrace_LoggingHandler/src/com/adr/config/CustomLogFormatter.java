@@ -11,7 +11,7 @@ public class CustomLogFormatter extends Formatter
 {
 
     @Override
-    public String format(LogRecord record) 
+    public String format(LogRecord record)  
     {
         // Formato básico para logs normales.
         String logMessage = String.format( "%1$tF %1$tT %2$s %3$s%n",
