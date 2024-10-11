@@ -1,7 +1,6 @@
 package com.adr.app;
 
 import com.adr.service.ExceptionLoggerControler;
-import com.adr.test.ClassTest;
 
 public class AppRun {
 

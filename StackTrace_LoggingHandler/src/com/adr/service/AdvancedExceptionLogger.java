@@ -15,7 +15,7 @@ public class AdvancedExceptionLogger implements ILogger, AutoCloseable {
 
     private static AdvancedExceptionLogger instance;  // Instancia única de la clase (patrón Singleton)
     private final Logger logger;                      // Logger principal de Java
-    private final Handler fileHandler;                // Handlers para manejar la salida de los logs
+//    private final Handler fileHandler;                // Handlers para manejar la salida de los logs
     private final Handler consoleHandler;             // Handler para manejar la salida de los logs
     private final ILogStorage logStorage;             // Interfaz para almacenar los logs (permite flexibilidad en el almacenamiento)
 
@@ -26,7 +26,7 @@ public class AdvancedExceptionLogger implements ILogger, AutoCloseable {
 
         // Crear el FileHandler usando la clase FileHandlerManager.
         FileHandlerManager fileHandlerManager = new FileHandlerManager(logDirectory);
-        this.fileHandler = fileHandlerManager.createFileHandler();
+//        this.fileHandler = fileHandlerManager.createFileHandler();
 
         // Configurar el consoleHandler.
         this.consoleHandler = new ConsoleHandler();
@@ -34,7 +34,7 @@ public class AdvancedExceptionLogger implements ILogger, AutoCloseable {
         this.consoleHandler.setFormatter(new CustomLogFormatter());
 
         // Añadir handlers
-        logger.addHandler(fileHandler);
+//        logger.addHandler(fileHandler);
         logger.addHandler(consoleHandler);
         logger.setUseParentHandlers(false);  // Evita que los logs se propaguen al logger padre.
     }
@@ -42,6 +42,10 @@ public class AdvancedExceptionLogger implements ILogger, AutoCloseable {
     /**
      * Método estático que regresa la instancia única de AdvancedExceptionLogger.
      * Si no existe, crea una nueva instancia.
+     * @param logDirectory
+     * @param logStorage
+     * @return 
+     * @throws java.io.IOException
      */
     public static synchronized AdvancedExceptionLogger getInstance(String logDirectory, ILogStorage logStorage) throws IOException {
         if (instance == null) {

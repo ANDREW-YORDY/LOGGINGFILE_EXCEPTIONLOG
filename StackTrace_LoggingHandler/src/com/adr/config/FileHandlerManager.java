@@ -4,7 +4,6 @@ import java.io.IOException;
 import java.nio.file.*;
 import java.time.*;
 import java.time.format.DateTimeFormatter;
-import java.util.Locale;
 import java.util.logging.FileHandler;
 import java.util.logging.Level;
 
@@ -17,14 +16,22 @@ public class FileHandlerManager
     
     private Path logPath;
     
+    /**
+     * Constructor que inicializa el directorio donde se almacenarán los logs.
+     */
     public FileHandlerManager( String logDirectory ) throws IOException
     {
         // Crear directorio de log si no existe.
-        this.logPath = Paths.get( System.getProperty("user.home"), "Logs2024", logDirectory );
+        this.logPath = Paths.get( System.getProperty("user.home"), "MyAppLogs", logDirectory );
         Files.createDirectories( logPath );
         
     }
     
+    /**
+     * Método que crea y devuelve un FileHandler configurado.
+     * @return 
+     * @throws java.io.IOException
+     */
     public FileHandler createFileHandler() throws IOException
     {
         // Nombre del archivo con fecha.
