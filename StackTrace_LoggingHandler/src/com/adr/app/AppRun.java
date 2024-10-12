@@ -8,6 +8,8 @@ public class AppRun {
     {
         ExceptionLoggerControler ctrLogger = new ExceptionLoggerControler();
         ctrLogger.runException();       
+       
+        
         
 //        System.out.println("PrintStackTrace*: \n");
 //        ClassTest.runTest1();

@@ -22,7 +22,7 @@ public class FileHandlerManager
     public FileHandlerManager( String logDirectory ) throws IOException
     {
         // Crear directorio de log si no existe.
-        this.logPath = Paths.get( System.getProperty("user.home"), "MyAppLogs", logDirectory );
+        this.logPath = Paths.get( System.getProperty("user.home"), "LogsJava", logDirectory );
         Files.createDirectories( logPath );
         
     }

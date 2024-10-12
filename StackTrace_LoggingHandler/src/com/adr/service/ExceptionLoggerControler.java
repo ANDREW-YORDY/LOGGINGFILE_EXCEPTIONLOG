@@ -7,7 +7,7 @@ import java.io.IOException;
  */
 public class ExceptionLoggerControler {
 
-    private static final String LOG_DIRECTORY = "LOGS.FILE"; // Carpeta para almacenar los logs
+    private static final String LOG_DIRECTORY = "LogsFile"; // Carpeta para almacenar los logs
 
     /**
      * Ejecuta el proceso de inducir una excepción y registrarla.
