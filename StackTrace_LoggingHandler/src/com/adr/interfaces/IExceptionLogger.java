@@ -1,4 +1,4 @@
-package com.adr.ihandler;
+package com.adr.interfaces;
 
 
 public interface IExceptionLogger 
