@@ -25,3 +25,6 @@ replay_pid*
 /StackTrace_LoggingHandler/nbproject/private/
 /StackTrace_LoggingHandler/build/
 /StackTrace_LoggingHandler/dist/
+/FileHandler_LoggingHandler/nbproject/private/
+/FileHandler_LoggingHandler/build/
+/FileHandler_LoggingHandler/dist/
